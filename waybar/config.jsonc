@@ -1,0 +1,42 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["tray", "pulseaudio", "network", "cpu", "memory", "clock"],
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "\udb80\udcaf {volume}%",
+    "format-muted": "\ueee8",
+    "format-icons": {
+      "headphones": "\udb80\udece",
+      "headset": "\udb80\udece",
+      "phone": "\uf095",
+      "portable": "\uf095",
+      "car": "\uf1b9",
+      "default": ["\uf027", "\uf028"]
+    },
+    "on-click": "pavucontrol"
+  },
+  "network": {
+    "format-wifi": "\uf1eb  {essid} ({signalStrength}%)",
+    "format-ethernet": "\udb81\udef3  {ipaddr}",
+    "format-disconnected": "Disconnected"
+  },
+  "cpu": {
+    "format": "\uf4bc   {usage}%"
+  },
+  "memory": {
+    "format": "\uefc5   {}%"
+  },
+  "clock": {
+    "format": "{:%Y/%m/%d %H:%M}"
+  }
+}
