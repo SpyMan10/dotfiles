@@ -1,38 +1,40 @@
 * {
-    bg0:    #1D1C20EE;
-    bg1:    #1D1C20EE;
-    bg2:    #1D1C20EE;
+    bg-main-default: #1D1B22DD;
+    bg-default: #1D1C20EE;
+    bg-lighter: #2B2930EE;
+    bg-highlight: #37353DEE;
 
-    bgon:   #433B86F2;
+    border-color-default: #37353DEE;
+    border-color-highlight: #776BE4F2;
+    border-radius-default: 10px;
+    border-radius-inner-default: 5px;
+    border-size-default: 2px;
 
-    bg3:    #776BE4F2;
-
-    fg0:    #D8DEE9;
-    fg1:    #ECEFF4;
-    fg2:    #8D82E7F2;
-    fg3:    #4C566A;
+    fg-default: #D8DEE9;
+    fg-darker: #ECEFF4;
+    fg-high: #8D82E7F2;
+    fg-low: #4C566A;
 }
 
 * {
-    font:   "ZedMono Nerd Font 11";
-
-    background-color:   transparent;
-    text-color:         @fg0;
-
-    margin:     0px;
-    padding:    0px;
-    spacing:    0px;
+    font: "Inter 11";
+    background-color: transparent;
+    text-color: @fg-default;
+    margin: 0px;
+    padding: 0px;
+    spacing: 0px;
 }
 
 window {
     location:       north;
     y-offset:       calc(50% - 176px);
     width:          650;
-    border-radius:  24px;
-
-    background-color:   @bg0;
-    border: 2px;
-    border-color: @bg3;
+    
+    background-color: @bg-main-default;
+    
+    border: @border-size-default;
+    border-radius: @border-radius-default;
+    border-color: @border-color-default;
 }
 
 mainbox {
@@ -40,32 +42,31 @@ mainbox {
 }
 
 inputbar {
-    background-color:   @bg1;
-    border-color:       @bg3;
-
-    border:         2px;
-    border-radius:  16px;
-
-    padding:    16px 16px;
+    background-color: @bg-lighter;
+    border-radius: @border-radius-inner-default;
     spacing:    8px;
-    children:   [ prompt, entry ];
+    children:   [prompt, entry];
 }
 
 prompt {
-    text-color: @fg2;
-    text: "\uebca";
+    font: "ZedMono Nerd Font 11";
+    text-color: @fg-high;
+    padding: 16px 16px;
+    background-color: @bg-highlight;
 }
 
 entry {
+    font: "ZedMono Nerd Font 11";
     placeholder:        "...";
-    placeholder-color:  @fg3;
+    placeholder-color:  @fg-low;
+    padding: 16px 5px;
 }
 
 message {
     margin:             12px 0 0;
     border-radius:      16px;
-    border-color:       @bg2;
-    background-color:   @bg2;
+/*     border-color:       @bg2;
+    background-color:   @bg2; */
 }
 
 textbox {
@@ -74,35 +75,33 @@ textbox {
 
 listview {
     background-color:   transparent;
-
     margin:     12px 0 0;
     lines:      8;
-    columns:    1;
-
+    columns:    2;
     fixed-height: false;
 }
 
 element {
     padding:        8px 16px;
     spacing:        8px;
-    border-radius:  16px;
+    border-radius:  @border-radius-inner-default;
 }
 
 element normal active {
-    text-color: @fg0;
+    text-color: @fg-default;
 }
 
 element alternate active {
-    text-color: @fg0;
+    text-color: @fg-default;
 }
 
 element selected normal, element selected active {
-    background-color:   @bgon;
-    text-color: @fg0;
+    background-color: @bg-highlight;
+    text-color: @fg-default;
 }
 
 element-icon {
-    size:           1em;
+    size:           1.3em;
     vertical-align: 0.5;
 }
 
@@ -110,6 +109,6 @@ element-text {
     text-color: inherit;
 }
 
-element selected {
+/* element selected {
     text-color: @bg1;
-}
+} */
