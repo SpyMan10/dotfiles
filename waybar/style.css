@@ -1,5 +1,5 @@
 * {
-  font-family: Inter, Noto;
+  font-family: Monospace, Noto;
   font-size: 15px;
   min-height: 22px;
   color: white;
@@ -7,7 +7,7 @@
 
 window#waybar {
   background: rgba(0, 0, 0, 0.5);
-  color: rgb(0, 0, 0);
+  color: white;
 }
 
 #network {
@@ -24,24 +24,52 @@ window#waybar {
 }
 
 #cpu {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 4px 0px 4px 5px;
+  border-radius: 100px 0px 0px 100px;
+  background: rgba(237, 195, 69, 0.5);
+  padding: 0px 5px 0px 10px;
   opacity: 1;
 }
 
+#temperature {
+  opacity: 1;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+#temperature.cpu {
+  margin: 4px 5px 4px 0px;
+  border-radius: 0px 100px 100px 0px;
+  background: rgba(237, 195, 69, 0.5);
+  padding: 0px 10px 0px 5px;
+}
+
+#temperature.gpu-e {
+  border-radius: 100px 0px 0px 100px;
+  background: rgba(231, 94, 179, 0.5);
+  padding: 0px 0px 0px 10px;
+}
+
+#temperature.gpu-j {
+  background: rgba(231, 94, 179, 0.5);
+  padding: 0px 10px 0px 10px;
+}
+
+#temperature.gpu-m {
+  border-radius: 0px 100px 100px 0px;
+  background: rgba(231, 94, 179, 0.5);
+  padding: 0px 10px 0px 0px;
+}
+
 #memory {
-  margin-left: 10px;
-  margin-right: 10px;
+  background: rgba(50, 50, 255, 0.5);
+  padding: 0px 10px;
+  margin: 4px 10px 4px 0px;
+  border-radius: 100px;
   opacity: 1;
 }
 
 #clock {
-  font-size: 13px;
-  font-weight: 600;
-  margin: 4px 10px 4px 10px;
-  padding: 0px 10px;
-  border-radius: 100px;
-  background: white;
-  color: black;
+  color: white;
   opacity: 1;
 }
