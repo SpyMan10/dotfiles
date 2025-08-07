@@ -23,6 +23,14 @@ window#waybar {
   min-width: 18px;
 }
 
+#battery {
+  font-size: 18px;
+}
+
+#battery.charging, #battery.plugged {
+  color: lime;
+}
+
 .modules-center {
   margin: 5px 0px 0px 0px;
 }
