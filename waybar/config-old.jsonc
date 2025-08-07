@@ -1,0 +1,74 @@
+{
+  "output": ["DP-1", "eDP-1"],
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "network",
+    "temperature#gpu-e",
+    "temperature#gpu-j",
+    "temperature#gpu-m",
+    "cpu",
+    "temperature#cpu",
+    "memory"
+  ],
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "\udb80\udcaf {volume}%",
+    "format-muted": "\ueee8",
+    "format-icons": {
+      "headphones": "\udb80\udece",
+      "headset": "\udb80\udece",
+      "phone": "\uf095",
+      "portable": "\uf095",
+      "car": "\uf1b9",
+      "default": ["\uf027", "\uf028"]
+    },
+    "on-click": "pavucontrol"
+  },
+  "network": {
+    "format-wifi": "\uf1eb {essid} ({signalStrength}%)",
+    "format": "\udb81\udef3 {ipaddr}",
+    "format-disconnected": "Disconnected"
+  },
+  "cpu": {
+    "format": "\uf4bc  {usage}% \udb83\udfdf \udb81\udcc5 {avg_frequency} GHz \udb83\udfdf",
+    "interval": 3
+  },
+  "temperature#cpu": {
+    "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+    "interval": 3,
+    "format": "\uf2c9 {temperatureC}°C"
+  },
+  "temperature#gpu-e": {
+    "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
+    "interval": 3,
+    "format": "GPU \uf2c9 E:{temperatureC}°C"
+  },
+  "temperature#gpu-j": {
+    "hwmon-path": "/sys/class/hwmon/hwmon5/temp2_input",
+    "interval": 3,
+    "format": "J:{temperatureC}°C"
+  },
+  "temperature#gpu-m": {
+    "hwmon-path": "/sys/class/hwmon/hwmon5/temp3_input",
+    "interval": 3,
+    "format": "M:{temperatureC}°C"
+  },
+  "memory": {
+    "format": "\uefc5  {used}/{total} GiB"
+  },
+  "clock": {
+    "format": "{:%Y/%m/%d %H:%M}"
+  }
+}

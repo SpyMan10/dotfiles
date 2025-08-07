@@ -1,75 +1,46 @@
 * {
-  font-family: Monospace, Noto;
-  font-size: 15px;
-  min-height: 22px;
+  font-family: Inter, ZedMonoNerdFont;
+  font-size: 14px;
   color: white;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  text-shadow: none;
 }
 
 window#waybar {
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
+  /* Disable default background. */
+  background: none;
 }
 
-#network {
-  margin-left: 10px;
-  margin-right: 10px;
-  transition: none;
-  opacity: 1;
-}
-
-#pulseaudio {
-  margin-left: 20px;
-  margin-right: 10px;
-  opacity: 1;
-}
-
-#cpu {
-  margin: 4px 0px 4px 5px;
-  border-radius: 100px 0px 0px 100px;
-  background: rgba(237, 195, 69, 0.5);
-  padding: 0px 5px 0px 10px;
-  opacity: 1;
-}
-
-#temperature {
-  opacity: 1;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-
-#temperature.cpu {
-  margin: 4px 5px 4px 0px;
-  border-radius: 0px 100px 100px 0px;
-  background: rgba(237, 195, 69, 0.5);
-  padding: 0px 10px 0px 5px;
-}
-
-#temperature.gpu-e {
-  border-radius: 100px 0px 0px 100px;
-  background: rgba(231, 94, 179, 0.5);
-  padding: 0px 0px 0px 10px;
-}
-
-#temperature.gpu-j {
-  background: rgba(231, 94, 179, 0.5);
+.module {
+  border-radius: 5px;
+  background: rgba(75, 75, 75, 0.5);
   padding: 0px 10px 0px 10px;
+  min-width: 18px;
 }
 
-#temperature.gpu-m {
-  border-radius: 0px 100px 100px 0px;
-  background: rgba(231, 94, 179, 0.5);
-  padding: 0px 10px 0px 0px;
+.modules-center {
+  margin: 5px 0px 0px 0px;
 }
 
-#memory {
-  background: rgba(50, 50, 255, 0.5);
-  padding: 0px 10px;
-  margin: 4px 10px 4px 0px;
-  border-radius: 100px;
-  opacity: 1;
+.modules-left {
+  margin: 5px 0px 0px 5px;
+}
+
+.modules-right {
+  margin: 5px 5px 0px 0px;
 }
 
 #clock {
-  color: white;
-  opacity: 1;
+  font-family: ZedMonoNerdFont;
+}
+
+tooltip {
+  border-radius: 5px;
+  background: rgba(75, 75, 75, 0.5);
+  padding: 5px 5px 5px 5px;
 }
