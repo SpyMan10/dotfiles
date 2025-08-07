@@ -9,6 +9,7 @@
   padding: 0;
   box-shadow: none;
   text-shadow: none;
+  background: none;
 }
 
 window#waybar {
@@ -18,17 +19,35 @@ window#waybar {
 
 .module {
   border-radius: 5px;
-  background: rgba(75, 75, 75, 0.5);
-  padding: 0px 10px 0px 10px;
+  /* background: rgba(75, 75, 75, 0.5); */
+  background: rgba(13, 13, 27, 0.9);
+  padding: 4px 10px 4px 10px;
   min-width: 18px;
+  /* border: 1px solid #808080; */
+  border: 1px solid rgba(56, 56, 121, 0.9);
 }
 
 #battery {
   font-size: 18px;
 }
 
-#battery.charging, #battery.plugged {
+#battery.charging,
+#battery.plugged,
+#battery.full {
   color: lime;
+}
+
+#custom-power {
+  font-size: 20px;
+  background: #516cf3;
+  padding: 0;
+  min-width: 50px;
+  border: 1px solid #516cf3;
+}
+
+#custom-power:hover {
+  background: #3c56da;
+  border: 1px solid #3c56da;
 }
 
 .modules-center {
@@ -51,4 +70,24 @@ tooltip {
   border-radius: 5px;
   background: rgba(75, 75, 75, 0.5);
   padding: 5px 5px 5px 5px;
+}
+
+menu {
+  border-radius: 6px;
+  padding: 7px;
+  background: rgba(13, 13, 27, 0.9);
+  border: solid 1px rgba(56, 56, 121, 0.9);
+}
+
+menuitem {
+  border-radius: 4px;
+  padding: 5px 3px;
+}
+
+menuitem:hover {
+  background: #516cf3;
+}
+
+menuitem:disabled label {
+  color: #505050;
 }

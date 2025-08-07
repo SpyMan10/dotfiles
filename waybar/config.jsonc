@@ -38,7 +38,7 @@
   },
 
   "pulseaudio": {
-    "format": "{icon}   {volume}%",
+    "format": "{icon}  {volume}%",
     "format-muted": "\ueee8",
     "format-source": "\uf130 {volume}%",
     "format-source-muted": "\uf131",
@@ -60,12 +60,12 @@
   },
 
   "memory": {
-    "format": "\uefc5   {percentage}%",
+    "format": "\uefc5  {percentage}%",
     "tooltip-format": "Memory {used} / {total} GiB"
   },
 
   "cpu": {
-    "format": "\uf4bc   {usage}% / {avg_frequency} Ghz"
+    "format": "\uf4bc  {usage}% / {avg_frequency} Ghz"
   },
 
   "tray": {
@@ -103,5 +103,15 @@
     "tooltip-format-discharging": "{capacity}% ~ {time}"
   },
 
-  "custom/power": {}
+  "custom/power": {
+    "format": "\udb82\udd01",
+    "tooltip": false,
+    "menu": "on-click",
+    "menu-file": "~/.config/waybar/resources/power-menu.xml",
+    "menu-actions": {
+      "shutdown": "poweroff",
+      "reboot": "reboot",
+      "disconnect": "hyprctl dispatch exit"
+    }
+  }
 }

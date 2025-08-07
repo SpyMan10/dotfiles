@@ -9,7 +9,7 @@ trap "killall waybar" EXIT
 
 while true; do
   waybar & 
-  echo "waybar-watch.sh: reloaded waybar"
+  echo "waybar-watch.sh: waybar reloaded"
   inotifywait -e create,modify $CONFIG_LOC $STYLE_LOC
   killall waybar
 done
