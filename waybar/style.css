@@ -1,5 +1,6 @@
+
 * {
-  font-family: Inter, ZedMonoNerdFont;
+  font-family: monospace;
   font-size: 14px;
   color: white;
   border: none;
@@ -12,19 +13,16 @@
   background: none;
 }
 
-window#waybar {
-  /* Disable default background. */
-  background: none;
-}
-
 .module {
-  border-radius: 5px;
-  /* background: rgba(75, 75, 75, 0.5); */
-  background: rgba(13, 13, 27, 0.9);
   padding: 4px 10px 4px 10px;
   min-width: 18px;
+}
+
+.modules-left, .modules-center, .modules-right {
+  background: rgba(13, 13, 27, 0.9);
   /* border: 1px solid #808080; */
   border: 1px solid rgba(56, 56, 121, 0.9);
+  border-radius: 5px;
 }
 
 #battery {
@@ -38,11 +36,13 @@ window#waybar {
 }
 
 #custom-power {
-  font-size: 20px;
+  border-radius: 5px;
+  font-size: 14px;
   background: #516cf3;
   padding: 0;
   min-width: 50px;
   border: 1px solid #516cf3;
+  margin: 3px;
 }
 
 #custom-power:hover {
