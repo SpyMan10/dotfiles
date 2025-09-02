@@ -1,6 +1,6 @@
 
 * {
-  font-family: monospace;
+  font-family: 'DejaVu Sans';
   font-size: 14px;
   color: white;
   border: none;
@@ -63,7 +63,7 @@
 }
 
 #clock {
-  font-family: ZedMonoNerdFont;
+  font-family: 'DejaVu Sans Mono';
 }
 
 tooltip {
