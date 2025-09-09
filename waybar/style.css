@@ -1,6 +1,7 @@
-
 * {
-  font-family: 'DejaVu Sans';
+  /* You must use here a Propo font from NerdFonts. */
+  font-family: 'AdwaitaMono Nerd Font Propo';
+  font-weight: 500;
   font-size: 14px;
   color: white;
   border: none;
@@ -14,19 +15,16 @@
 }
 
 .module {
-  padding: 4px 10px 4px 10px;
+  padding: 0px 8px 0px 8px;
   min-width: 18px;
 }
 
-.modules-left, .modules-center, .modules-right {
-  background: rgba(13, 13, 27, 0.9);
-  /* border: 1px solid #808080; */
-  border: 1px solid rgba(56, 56, 121, 0.9);
-  border-radius: 5px;
+window#waybar {
+  background: rgba(15, 15, 15, 0.90);
 }
 
 #battery {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #battery.charging,
@@ -35,7 +33,7 @@
   color: lime;
 }
 
-#custom-power {
+/* #custom-power {
   border-radius: 5px;
   font-size: 14px;
   background: #516cf3;
@@ -43,40 +41,18 @@
   min-width: 50px;
   border: 1px solid #516cf3;
   margin: 3px;
+} */
+
+.module:not(#clock):not(#tray):hover {
+  background: #eeeeee;
+  color: #151515;
 }
 
-#custom-power:hover {
-  background: #3c56da;
-  border: 1px solid #3c56da;
-}
-
-.modules-center {
-  margin: 5px 0px 0px 0px;
-}
-
-.modules-left {
-  margin: 5px 0px 0px 5px;
-}
-
-.modules-right {
-  margin: 5px 5px 0px 0px;
-}
-
-#clock {
-  font-family: 'DejaVu Sans Mono';
-}
-
-tooltip {
-  border-radius: 5px;
-  background: rgba(75, 75, 75, 0.5);
-  padding: 5px 5px 5px 5px;
-}
-
-menu {
-  border-radius: 6px;
-  padding: 7px;
-  background: rgba(13, 13, 27, 0.9);
-  border: solid 1px rgba(56, 56, 121, 0.9);
+tooltip box, menu {
+  border-radius: 10px;
+  background: rgba(15, 15, 15, 0.90);
+  padding: 10px;
+  border: solid 2px #eeeeee;
 }
 
 menuitem {
@@ -85,7 +61,11 @@ menuitem {
 }
 
 menuitem:hover {
-  background: #516cf3;
+  background: #eeeeee;
+}
+
+menuitem:hover label {
+  color: #151515;
 }
 
 menuitem:disabled label {

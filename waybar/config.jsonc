@@ -1,15 +1,15 @@
 // -*- mode: jsonc -*-
 {
   "output": ["DP-1", "DP-2", "eDP-1"],
-  "height": 30,
+  "height": 28,
   "spacing": 4,
   "modules-left": ["tray"],
   "modules-center": ["clock"],
   "modules-right": [
-    "temperature#cpu",
-    "cpu",
+    "group/cpu",
     "memory",
-    "pulseaudio",
+    "wireplumber#sink",
+    "wireplumber#source",
     "bluetooth",
     "network",
     "battery",
@@ -18,15 +18,17 @@
 
   "network": {
     "format-ethernet": "\udb81\udef3",
-    "format-wifi": "\uf1eb ",
-    "format-linked": "\uef09",
-    "format-disconnected": "",
-    "format-disabled": "",
+    "format-wifi": "{icon}",
+    "format-icons": ["\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
+    "format-linked": "\udb80\udf78",
+    "format-disconnected": "\udb83\udc9b",
+    "format-disabled": "\udb83\udc9b",
     "format": "\udb81\udef3",
     "tooltip": true,
     "tooltip-format": "{ifname}",
-    "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr}",
-    "tooltip-format-wifi": "{ifname}: {ipaddr}/{cidr}"
+    "tooltip-format-ethernet": "{ifname} {ipaddr}/{cidr}",
+    "tooltip-format-wifi": "{essid} {ipaddr}/{cidr}",
+    "on-click": "nm-connection-editor"
   },
 
   "bluetooth": {
@@ -34,11 +36,12 @@
     "format-on": "\udb80\udcaf",
     "format-connected": "\udb80\udcb1",
     "format-no-controller": "",
-    "format-disabled": ""
+    "format-disabled": "\udb80\udcb2"
   },
 
-  "pulseaudio": {
-    "format": "{icon}  {volume}%",
+  "wireplumber#sink": {
+    "node-type": "Audio/Sink",
+    "format": "{icon} {volume}%",
     "format-muted": "\ueee8",
     "format-source": "\uf130 {volume}%",
     "format-source-muted": "\uf131",
@@ -52,20 +55,43 @@
     "tooltip-format": "{desc}"
   },
 
-  "temperature#cpu": {
-    "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
-    "interval": 3,
-    "format": "\uf2cb {temperatureC}°C",
-    "tooltip-format": "CPU"
+  "wireplumber#source": {
+    "node-type": "Audio/Source",
+    "format": "{icon}",
+    "format-muted": "\udb80\udf6d",
+    "on-click": "pavucontrol",
+    "format-icons": "\uec1c",
+    "tooltip": true,
+    "tooltip-format": "{desc}"
   },
 
   "memory": {
-    "format": "\uefc5  {percentage}%",
-    "tooltip-format": "Memory {used} / {total} GiB"
+    "format": "\uefc5 {percentage}%",
+    "tooltip-format": "",
+    "format-alt": "\uefc5 {used}/{total} GiB"
+  },
+
+  "group/cpu": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "veiled",
+      "transition-left-to-right": true
+    },
+    "click-to-reveal": true,
+    "modules": ["cpu", "temperature#cpu"]
+  },
+
+  "temperature#cpu": {
+    "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+    "interval": 3,
+    "format": "\uf2c9 {temperatureC}C",
+    "tooltip-format": ""
   },
 
   "cpu": {
-    "format": "\uf4bc  {usage}% / {avg_frequency} Ghz"
+    "format": "\uf4bc {usage}%",
+    "format-alt": "\uf4bc {avg_frequency} GHz"
   },
 
   "tray": {
@@ -81,11 +107,11 @@
       "weeks-pos": "right",
       "on-scroll": 1,
       "format": {
-        "months": "<span color='#ffead3'><b>{}</b></span>",
-        "days": "<span color='#ecc6d9'><b>{}</b></span>",
-        "weeks": "<span color='#99ffdd'><b>{}</b></span>",
-        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+        "months": "<span color='#f1f1f1'><b>{}</b></span>",
+        "days": "<span color='#f1f1f1'><b>{}</b></span>",
+        "weeks": "<span color='#B4B4B4'><b>{}</b></span>",
+        "weekdays": "<span color='#B4B4B4'><b>{}</b></span>",
+        "today": "<span color='#B5DEFF'><b><u>{}</u></b></span>"
       }
     }
   },
@@ -104,7 +130,7 @@
   },
 
   "custom/power": {
-    "format": "\udb82\udd01",
+    "format": "\uf011",
     "tooltip": false,
     "menu": "on-click",
     "menu-file": "~/.config/waybar/resources/power-menu.xml",
