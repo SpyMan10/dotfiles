@@ -33,16 +33,6 @@ window#waybar {
   color: lime;
 }
 
-/* #custom-power {
-  border-radius: 5px;
-  font-size: 14px;
-  background: #516cf3;
-  padding: 0;
-  min-width: 50px;
-  border: 1px solid #516cf3;
-  margin: 3px;
-} */
-
 .module:not(#clock):not(#tray):hover {
   background: #eeeeee;
   color: #151515;

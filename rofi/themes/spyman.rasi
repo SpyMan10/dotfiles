@@ -1,25 +1,25 @@
 * {
-    bg-main-default: #1D1B22DD;
-    bg-default: #1D1C20EE;
-    bg-lighter: #2B2930EE;
-    bg-highlight: #37353DEE;
+    bg-color: #151515E5;
+    bg-color-high: #353535E5;
+    bg-color-light: #EEEEEEFF;
 
-    border-color-default: #37353DEE;
-    border-color-highlight: #776BE4F2;
-    border-radius-default: 10px;
-    border-radius-inner-default: 5px;
-    border-size-default: 2px;
+    br-color: #EEEEEEFF;
+    br-color-low: #353535FF;
 
-    fg-default: #D8DEE9;
-    fg-darker: #ECEFF4;
-    fg-high: #8D82E7F2;
-    fg-low: #4C566A;
+    ft-color: #EEEEEEFF;
+    ft-color-low: #999999FF;
+    ft-color-dark: #151515FF;
+
+    br-sz: 2px;
+    br-rad: 8px;
+    br-rad-inner: 4px;
+    br-rad-full: 1000px;
 }
 
 * {
-    font: "Inter 11";
+    font: "Noto Mono 11";
     background-color: transparent;
-    text-color: @fg-default;
+    text-color: @ft-color;
     margin: 0px;
     padding: 0px;
     spacing: 0px;
@@ -28,80 +28,83 @@
 window {
     location:       north;
     y-offset:       calc(50% - 176px);
-    width:          650;
+    width:          700;
     
-    background-color: @bg-main-default;
+    background-color: @bg-color;
     
-    border: @border-size-default;
-    border-radius: @border-radius-default;
-    border-color: @border-color-default;
+    border: @br-sz;
+    border-radius: @br-rad;
+    border-color: @br-color-low;
 }
 
 mainbox {
-    padding:    12px;
+    padding: 25px;
+    spacing: 20px;
 }
 
 inputbar {
-    background-color: @bg-lighter;
-    border-radius: @border-radius-inner-default;
-    spacing:    8px;
-    children:   [prompt, entry];
+    background-color: @bg-color-high;
+    border: @br-sz;
+    border-color: @br-color;
+    border-radius: @br-rad-full;
+    children: [entry];
 }
 
-prompt {
-    font: "ZedMono Nerd Font 11";
-    text-color: @fg-high;
-    padding: 16px 16px;
-    background-color: @bg-highlight;
-}
+// prompt {
+//     text-color: @ft-color-dark;
+//     padding: 20px 25px;
+//     background-color: @bg-color-light;
+// }
 
 entry {
-    font: "ZedMono Nerd Font 11";
-    placeholder:        "...";
-    placeholder-color:  @fg-low;
-    padding: 16px 5px;
+    font: "Noto Sans 12";
+    placeholder: "...";
+    placeholder-color: @ft-color-low;
+    padding: 20px 40px;
+    background-color: @bg-color;
 }
 
 message {
-    margin:             12px 0 0;
-    border-radius:      16px;
+    margin: 12px 0 0;
+    border-radius: 16px;
 /*     border-color:       @bg2;
     background-color:   @bg2; */
 }
 
-textbox {
-    padding:    8px 24px;
-}
+// textbox {
+//     padding: 8px 24px;
+// }
 
 listview {
-    background-color:   transparent;
-    margin:     12px 0 0;
-    lines:      8;
-    columns:    2;
+    background-color: transparent;
+    margin: 12px 0 0;
+    lines: 8;
+    columns: 2;
     fixed-height: false;
 }
 
 element {
-    padding:        8px 16px;
-    spacing:        8px;
-    border-radius:  @border-radius-inner-default;
+    padding: 8px 16px;
+    spacing: 8px;
+    border-radius: @br-rad-inner;
 }
 
 element normal active {
-    text-color: @fg-default;
+    text-color: @ft-color;
 }
 
 element alternate active {
-    text-color: @fg-default;
+    text-color: @ft-color;
 }
 
 element selected normal, element selected active {
-    background-color: @bg-highlight;
-    text-color: @fg-default;
+    background-color: @ft-color;
+    text-color: @bg-color;
+    border: @br-sz;
 }
 
 element-icon {
-    size:           1.3em;
+    size: 1.3em;
     vertical-align: 0.5;
 }
 
