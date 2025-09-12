@@ -3,7 +3,7 @@
   "output": ["DP-1", "DP-2", "eDP-1"],
   "height": 28,
   "spacing": 4,
-  "modules-left": ["tray"],
+  "modules-left": ["hyprland/workspaces", "tray", "mpris"],
   "modules-center": ["clock"],
   "modules-right": [
     "group/cpu",
@@ -16,10 +16,23 @@
     "custom/power"
   ],
 
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": "\uf4aa",
+      "active": "\uf111"
+    }
+  },
+
   "network": {
     "format-ethernet": "\udb81\udef3",
     "format-wifi": "{icon}",
-    "format-icons": ["\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
+    "format-icons": [
+      "\udb82\udd1f",
+      "\udb82\udd22",
+      "\udb82\udd25",
+      "\udb82\udd28"
+    ],
     "format-linked": "\udb80\udf78",
     "format-disconnected": "\udb83\udc9b",
     "format-disabled": "\udb83\udc9b",
@@ -36,33 +49,34 @@
     "format-on": "\udb80\udcaf",
     "format-connected": "\udb80\udcb1",
     "format-no-controller": "",
-    "format-disabled": "\udb80\udcb2"
+    "format-disabled": "\udb80\udcb2",
+    "on-click": "blueman-manager"
   },
 
   "wireplumber#sink": {
     "node-type": "Audio/Sink",
     "format": "{icon} {volume}%",
     "format-muted": "\ueee8",
-    "format-source": "\uf130 {volume}%",
-    "format-source-muted": "\uf131",
-    "on-click": "pavucontrol",
+    "on-click-right": "pavucontrol",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "format-icons": {
       "headphone": "\uf025",
       "headset": "\uf025",
       "default": ["\uf026", "\uf027", "\uf028"]
     },
     "tooltip": true,
-    "tooltip-format": "{desc}"
+    "tooltip-format": "{node_name}"
   },
 
   "wireplumber#source": {
     "node-type": "Audio/Source",
     "format": "{icon}",
     "format-muted": "\udb80\udf6d",
-    "on-click": "pavucontrol",
+    "on-click-right": "pavucontrol",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
     "format-icons": "\uec1c",
     "tooltip": true,
-    "tooltip-format": "{desc}"
+    "tooltip-format": "{node_name}"
   },
 
   "memory": {
@@ -96,6 +110,25 @@
 
   "tray": {
     "spacing": 8
+  },
+
+  "mpris": {
+    "artist-len": 20,
+    "title-len": 20,
+    "format": "{status_icon} {dynamic}",
+    "format-paused": "{status_icon} {dynamic}",
+    "interval": 1,
+    "player-icons": {
+      "default": "\uf001",
+      "mpv": "\uf001",
+      "firefox": "\udb80\ude39",
+      "spotify": "\uf1bc"
+    },
+    "status-icons": {
+      "paused": "\uf04c",
+      "playing": "\uf001"
+    }
+    // "ignored-players": ["firefox"]
   },
 
   "clock": {

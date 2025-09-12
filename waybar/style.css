@@ -33,7 +33,7 @@ window#waybar {
   color: lime;
 }
 
-.module:not(#clock):not(#tray):hover {
+.module:not(#clock):not(#tray):not(#workspaces):hover {
   background: #eeeeee;
   color: #151515;
 }
@@ -45,6 +45,10 @@ tooltip box, menu {
   border: solid 2px #eeeeee;
 }
 
+menuitem label {
+  font-family: 'Adwaita Sans';
+}
+
 menuitem {
   border-radius: 4px;
   padding: 5px 3px;
@@ -54,10 +58,16 @@ menuitem:hover {
   background: #eeeeee;
 }
 
-menuitem:hover label {
+menuitem:hover label, menuitem:hover image {
   color: #151515;
 }
 
-menuitem:disabled label {
+menuitem:disabled label, menuitem:disabled image {
   color: #505050;
+}
+
+/* Wireplumber specials */
+
+#wireplumber.muted {
+  background-color: #fa6767;
 }

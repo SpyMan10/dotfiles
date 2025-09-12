@@ -8,52 +8,34 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "text",
-          "style": "plain",
-          "foreground": "#ffffff",
-          "template": " \uebca \ue621 "
-        },
-        {
           "type": "session",
-          "style": "diamond",
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0bc",
-          "foreground": "#ffffff",
-          "background": "#516cf3",
-          "template": " {{ .UserName }} "
+          "style": "plain",
+          "foreground": "#8395f1",
+          "template": "{{ .UserName }}"
         },
         {
           "type": "path",
-          "style": "diamond",
-          "leading_diamond": "\ue0ba",
-          "trailing_diamond": "\ue0b0",
-          "foreground": "#ffffff",
-          "background": "#ff316f",
+          "style": "plain",
+          "foreground": "#fd6d98",
+          "template": " {{ .Path }} ",
           "properties": {
-            "style": "agnoster_full",
-            "home_icon": "\ue617 ",
-            "folder_separator_icon": "/",
-            "mapped_locations": {
-              "/": "\udb83\udfe0 "
-            }
+            "style": "agnoster_full"
           }
         },
         {
           "type": "git",
-          "style": "powerline",
-          "powerline_symbol": "\ue0b0",
-          "background": "#74c4dd",
-          "foreground": "#064966",
-          "template": " {{ .HEAD }} ",
+          "style": "plain",
+          "foreground": "#74c4dd",
+          "template": "<#3E859B>git:</>({{ .HEAD }}) ",
           "properties": {
-            "branch_icon": "\uf126 "
+            "branch_icon": ""
           }
         },
         {
           "type": "text",
           "style": "plain",
           "foreground": "#ffffff",
-          "template": " \ue691"
+          "template": "\uf460"
         }
       ]
     }
