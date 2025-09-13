@@ -1,6 +1,5 @@
 // -*- mode: jsonc -*-
 {
-  "output": ["DP-1", "DP-2", "eDP-1"],
   "height": 28,
   "spacing": 4,
   "modules-left": ["hyprland/workspaces", "tray", "mpris"],
@@ -18,9 +17,22 @@
 
   "hyprland/workspaces": {
     "format": "{icon}",
+    "spacing": "10",
     "format-icons": {
       "default": "\uf4aa",
       "active": "\uf111"
+    },
+    "persistent-workspaces": {
+      // Workstation
+      "HDMI-A-1": [1],
+      "DP-1": [2, 3, 4],
+      "DP-2": [5, 6, 7],
+      // Laptop
+      "eDP-1": [1, 2, 3, 4]
+    },
+    "workspace-taskbar": {
+      "enable": true,
+      "format": "{title}"
     }
   },
 
