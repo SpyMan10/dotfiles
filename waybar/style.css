@@ -30,7 +30,7 @@ window#waybar {
 #battery.charging,
 #battery.plugged,
 #battery.full {
-  color: lime;
+  color: rgb(129, 241, 129);
 }
 
 .module:not(#clock):not(#tray):not(#workspaces):hover {
