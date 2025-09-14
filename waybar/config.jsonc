@@ -163,7 +163,8 @@
 
   "battery": {
     "interval": 2,
-    "format": "{icon}",
+    "format": "{icon} {capacity}%",
+    "format-alt": "{icon} {time}",
     "format-plugged": "\udb80\udc84",
     "format-icons": {
       "charging": ["\udb82\udc9c", "\udb82\udc9d", "\udb80\udc85"],
