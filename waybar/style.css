@@ -45,6 +45,10 @@ menuitem label {
   font-family: 'Adwaita Sans';
 }
 
+#tray menu menuitem:not(:hover) label {
+  color: #eeeeee
+}
+
 menuitem {
   border-radius: 4px;
   padding: 5px 3px;
@@ -54,7 +58,9 @@ menuitem:hover {
   background: #eeeeee;
 }
 
-menuitem:hover label, menuitem:hover image {
+menuitem:hover label,
+menuitem:hover image,
+#tray menuitem:hover > label {
   color: #151515;
 }
 
