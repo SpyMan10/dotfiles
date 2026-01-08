@@ -2,7 +2,7 @@
 {
   "height": 28,
   "spacing": 0,
-  "modules-left": ["hyprland/workspaces", "tray", "custom/skew", "mpris"],
+  "modules-left": ["custom/icon", "custom/skew-icon", "hyprland/workspaces", "tray", "custom/skew", "mpris"],
   "modules-center": ["clock"],
   "modules-right": [
     "group/cpu",
@@ -210,6 +210,16 @@
 
   "custom/skew": {
     "format": "\ue0bc",
+    "tooltip": false
+  },
+
+  "custom/icon": {
+    "tooltip": false,
+    "format": "\uf303"
+  },
+
+  "custom/skew-icon": {
+    "format": "\ue0b0 ",
     "tooltip": false
   }
 }

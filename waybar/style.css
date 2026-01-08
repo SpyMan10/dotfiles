@@ -69,12 +69,20 @@ menuitem:disabled label, menuitem:disabled image {
   font-size: 22px;
   margin-left: -2px;
   margin-top: -2px;
-  color: rgba(53, 48, 99, 0.8);
+  color: rgba(41, 52, 110, 0.8);
 }
 
-.modules-left .module:not(#custom-skew) {
-  background: rgba(53, 48, 99, 0.8);
-  border-bottom: 2px solid rgb(118, 80, 168);
+#custom-skew-icon {
+  padding: 0;
+  font-size: 22px;
+  margin-left: -2px;
+  margin-top: -2px;
+  color: #eeeeee;
+}
+
+.modules-left .module:not(#custom-skew):not(#custom-icon) {
+  background: rgba(41, 52, 110, 0.8);
+  border-bottom: 2px solid rgb(68, 85, 179);
 }
 
 #workspaces {
@@ -89,7 +97,14 @@ menuitem:disabled label, menuitem:disabled image {
 
 #workspaces button.active {
   color: #eeeeee;
-  background: rgb(118, 80, 168);
+  background: rgb(68, 85, 179);
+}
+
+#custom-icon {
+  color: rgb(68, 85, 179);
+  font-size: 18px;
+  border-bottom: 2px solid rgb(68, 85, 179);
+  background: #eeeeee;
 }
 
 /* Wireplumber specials */
