@@ -1,8 +1,8 @@
 // -*- mode: jsonc -*-
 {
   "height": 28,
-  "spacing": 4,
-  "modules-left": ["hyprland/workspaces", "tray", "mpris"],
+  "spacing": 0,
+  "modules-left": ["hyprland/workspaces", "tray", "custom/skew", "mpris"],
   "modules-center": ["clock"],
   "modules-right": [
     "group/cpu",
@@ -17,8 +17,7 @@
   ],
 
   "hyprland/workspaces": {
-    "format": "{icon}",
-    "spacing": "10",
+    "format": "{id}",
     "format-icons": {
       "default": "\uf4aa",
       "active": "\uf111"
@@ -207,5 +206,10 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
+  },
+
+  "custom/skew": {
+    "format": "\ue0bc",
+    "tooltip": false
   }
 }
