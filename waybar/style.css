@@ -29,7 +29,7 @@ window#waybar {
   color: rgb(129, 241, 129);
 }
 
-.module:not(#clock):not(#tray):not(#workspaces):not(#custom-skew):hover {
+.module:not(#clock):not(#tray):not(#workspaces):not(#custom-slash1):hover {
   background: #eeeeee;
   color: #151515;
 }
@@ -64,15 +64,22 @@ menuitem:disabled label, menuitem:disabled image {
   color: #505050;
 }
 
-#custom-skew {
+#custom-slash0 {
   padding: 0;
   font-size: 22px;
   margin-left: -2px;
   margin-top: -2px;
-  color: rgba(41, 52, 110, 0.8);
+  color: rgb(41, 52, 110);
 }
 
-#custom-skew-icon {
+#custom-slash1 {
+  padding: 0;
+  font-size: 22px;
+  margin-top: -2px;
+  color: rgb(41, 52, 110);
+}
+
+#custom-arrow-icon {
   padding: 0;
   font-size: 22px;
   margin-left: -2px;
@@ -80,13 +87,21 @@ menuitem:disabled label, menuitem:disabled image {
   color: #eeeeee;
 }
 
-.modules-left .module:not(#custom-skew):not(#custom-icon) {
-  background: rgba(41, 52, 110, 0.8);
+#custom-self,
+#custom-arrow-icon,
+#workspaces {
+  background: rgb(41, 52, 110);
   border-bottom: 2px solid rgb(68, 85, 179);
 }
 
-#workspaces {
-  color: rgb(118, 80, 168);
+#custom-slash0,
+#tray {
+  background: rgb(97, 60, 112);
+  border-bottom: 2px solid rgb(176,  79, 214);
+}
+
+#custom-slash1 {
+  color: rgb(97, 60, 112);
 }
 
 #workspaces button {

@@ -2,8 +2,19 @@
 {
   "height": 28,
   "spacing": 0,
-  "modules-left": ["custom/icon", "custom/skew-icon", "hyprland/workspaces", "tray", "custom/skew", "mpris"],
-  "modules-center": ["clock"],
+  "modules-left": [
+    "custom/icon",
+    "custom/arrow-icon",
+    "custom/self",
+    "hyprland/workspaces",
+    "custom/slash0",
+    "tray",
+    "custom/slash1"
+    // "mpris"
+  ],
+  "modules-center": [
+    "clock"
+  ],
   "modules-right": [
     "group/cpu",
     "memory",
@@ -15,7 +26,27 @@
     "custom/power",
     "custom/notification"
   ],
-
+  "custom/icon": {
+    "tooltip": false,
+    "format": "\uf303"
+  },
+  "custom/arrow-icon": {
+    "format": "\ue0b0 ",
+    "tooltip": false
+  },
+  "custom/self": {
+    "exec": "echo $(whoami)@$(hostname)",
+    "format": "{}",
+    "tooltip": false
+  },
+  "custom/slash1": {
+    "format": "\ue0bc ",
+    "tooltip": false
+  },
+  "custom/slash0": {
+    "format": "\ue0bc ",
+    "tooltip": false
+  },
   "hyprland/workspaces": {
     "format": "{id}",
     "format-icons": {
@@ -24,18 +55,32 @@
     },
     "persistent-workspaces": {
       // Workstation
-      "HDMI-A-1": [1],
-      "DP-1": [2, 3, 4],
-      "DP-2": [5, 6, 7],
+      "HDMI-A-1": [
+        1
+      ],
+      "DP-1": [
+        2,
+        3,
+        4
+      ],
+      "DP-2": [
+        5,
+        6,
+        7
+      ],
       // Laptop
-      "eDP-1": [1, 2, 3, 4]
+      "eDP-1": [
+        1,
+        2,
+        3,
+        4
+      ]
     },
     "workspace-taskbar": {
       "enable": true,
       "format": "{title}"
     }
   },
-
   "network": {
     "format-ethernet": "\udb81\udef3",
     "format-wifi": "{icon}",
@@ -55,7 +100,6 @@
     "tooltip-format-wifi": "{essid} {ipaddr}/{cidr}",
     "on-click": "nm-connection-editor"
   },
-
   "bluetooth": {
     "format-off": "\udb80\udcb2",
     "format-on": "\udb80\udcaf",
@@ -64,7 +108,6 @@
     "format-disabled": "\udb80\udcb2",
     "on-click": "blueman-manager"
   },
-
   "wireplumber#sink": {
     "node-type": "Audio/Sink",
     "format": "{icon} {volume}%",
@@ -74,12 +117,15 @@
     "format-icons": {
       "headphone": "\uf025",
       "headset": "\uf025",
-      "default": ["\uf026", "\uf027", "\uf028"]
+      "default": [
+        "\uf026",
+        "\uf027",
+        "\uf028"
+      ]
     },
     "tooltip": true,
     "tooltip-format": "{node_name}"
   },
-
   "wireplumber#source": {
     "node-type": "Audio/Source",
     "format": "{icon}",
@@ -90,13 +136,11 @@
     "tooltip": true,
     "tooltip-format": "{node_name}"
   },
-
   "memory": {
     "format": "\uefc5 {percentage}%",
     "tooltip-format": "",
     "format-alt": "\uefc5 {used}/{total} GiB"
   },
-
   "group/cpu": {
     "orientation": "inherit",
     "drawer": {
@@ -105,25 +149,24 @@
       "transition-left-to-right": true
     },
     "click-to-reveal": true,
-    "modules": ["cpu", "temperature#cpu"]
+    "modules": [
+      "cpu",
+      "temperature#cpu"
+    ]
   },
-
   "temperature#cpu": {
     "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
     "interval": 3,
     "format": "\uf2c9 {temperatureC}C",
     "tooltip-format": ""
   },
-
   "cpu": {
     "format": "\uf4bc {usage}%",
     "format-alt": "\uf4bc {avg_frequency} GHz"
   },
-
   "tray": {
     "spacing": 8
   },
-
   "mpris": {
     "artist-len": 20,
     "title-len": 20,
@@ -142,7 +185,6 @@
     }
     // "ignored-players": ["firefox"]
   },
-
   "clock": {
     "format": "{:%Y/%m/%d %H:%M}",
     "tooltip-format": "<tt>{calendar}</tt>",
@@ -160,21 +202,31 @@
       }
     }
   },
-
   "battery": {
     "interval": 2,
     "format": "{icon} {capacity}%",
     "format-alt": "{icon} {time}",
     "format-plugged": "\udb80\udc84",
     "format-icons": {
-      "charging": ["\udb82\udc9c", "\udb82\udc9d", "\udb80\udc85"],
-      "discharging": ["\udb80\udc7a", "\udb80\udc7e", "\udb80\udc79"],
-      "default": ["\udb80\udc7a", "\udb80\udc7e", "\udb80\udc79"]
+      "charging": [
+        "\udb82\udc9c",
+        "\udb82\udc9d",
+        "\udb80\udc85"
+      ],
+      "discharging": [
+        "\udb80\udc7a",
+        "\udb80\udc7e",
+        "\udb80\udc79"
+      ],
+      "default": [
+        "\udb80\udc7a",
+        "\udb80\udc7e",
+        "\udb80\udc79"
+      ]
     },
     "tooltip-format-charging": "{capacity}% ~ {time}",
     "tooltip-format-discharging": "{capacity}% ~ {time}"
   },
-
   "custom/power": {
     "format": "\uf011",
     "tooltip": false,
@@ -186,7 +238,6 @@
       "disconnect": "hyprctl dispatch exit"
     }
   },
-
   "custom/notification": {
     "tooltip": true,
     "format": "<span size='12pt'>{icon}</span>",
@@ -206,20 +257,5 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
-  },
-
-  "custom/skew": {
-    "format": "\ue0bc",
-    "tooltip": false
-  },
-
-  "custom/icon": {
-    "tooltip": false,
-    "format": "\uf303"
-  },
-
-  "custom/skew-icon": {
-    "format": "\ue0b0 ",
-    "tooltip": false
   }
 }
