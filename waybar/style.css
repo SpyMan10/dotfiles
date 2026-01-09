@@ -20,7 +20,7 @@
 }
 
 window#waybar {
-  background: rgba(15, 15, 15, 0.90);
+  background: rgba(15, 15, 15, 0.70);
 }
 
 #battery.charging,
@@ -29,7 +29,7 @@ window#waybar {
   color: rgb(129, 241, 129);
 }
 
-.module:not(#clock):not(#tray):not(#workspaces):not(#custom-slash1):hover {
+.module:not(#clock):not(#tray):not(#workspaces):not(#custom-slash1):not(#custom-arrow-icon):not(#custom-slash0):not(#custom-slash1):not(#custom-self):hover {
   background: #eeeeee;
   color: #151515;
 }

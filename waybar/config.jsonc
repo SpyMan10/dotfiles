@@ -36,6 +36,7 @@
   },
   "custom/self": {
     "exec": "echo $(whoami)@$(hostname)",
+    "interval": 0,
     "format": "{}",
     "tooltip": false
   },
