@@ -5,8 +5,8 @@
   "modules-left": [
     "custom/icon",
     "custom/arrow-icon",
-    "custom/self",
     "hyprland/workspaces",
+    "custom/self",
     "custom/slash0",
     "tray",
     "custom/slash1"
@@ -37,11 +37,11 @@
   "custom/self": {
     "exec": "echo $(whoami)@$(hostname)",
     "interval": 0,
-    "format": "{}",
+    "format": "\ue0bb  {} ",
     "tooltip": false
   },
   "custom/slash1": {
-    "format": "\ue0bc ",
+    "format": "\ue0b0 ",
     "tooltip": false
   },
   "custom/slash0": {
@@ -166,7 +166,7 @@
     "format-alt": "\uf4bc {avg_frequency} GHz"
   },
   "tray": {
-    "spacing": 8
+    "spacing": 10
   },
   "mpris": {
     "artist-len": 20,

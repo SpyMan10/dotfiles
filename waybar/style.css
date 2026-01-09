@@ -34,34 +34,38 @@ window#waybar {
   color: #151515;
 }
 
-tooltip box, menu {
-  border-radius: 10px;
+tooltip box {
+  border-radius: 8px;
   background: rgba(15, 15, 15, 0.90);
   padding: 10px;
-  border: solid 2px #eeeeee;
+  border: solid 2px #5a5a5a;
 }
 
-#tray menu menuitem:not(:hover) label {
-  color: #eeeeee
+menu {
+  background: rgba(18, 18, 29, 0.9);
+  border-radius: 6px;
+  padding: 8px 0px;
+}
+
+menuitem label {
+  font-family: sans-serif;
 }
 
 menuitem {
-  border-radius: 4px;
+  /* border-radius: 4px; */
   padding: 5px 3px;
+  border-left: solid 2px transparent;
 }
 
 menuitem:hover {
-  background: #eeeeee;
+  background: #343c64;
+  border-left: solid 2px rgb(68, 85, 179);
 }
 
-menuitem:hover label,
-menuitem:hover image,
-#tray menuitem:hover > label {
-  color: #151515;
-}
-
-menuitem:disabled label, menuitem:disabled image {
-  color: #505050;
+menuitem:disabled label,
+menuitem:insensitive label,
+menuitem:disabled image {
+  color: #464b63;
 }
 
 #custom-slash0 {

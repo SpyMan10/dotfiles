@@ -13,7 +13,7 @@
     </child>
     <child>
       <object class="GtkMenuItem" id="disconnect">
-        <property name="label">󰿅 Disconnect</property>
+        <property name="label">&#xedb83; Disconnect</property>
       </object>
     </child>
   </object>
