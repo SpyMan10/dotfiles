@@ -35,9 +35,9 @@
     "tooltip": false
   },
   "custom/self": {
-    "exec": "echo $(whoami)@$(hostname)",
+    "exec": "echo \"$HOSTNAME \ue0bb $USER\"",
     "interval": 0,
-    "format": "\ue0bb  {} ",
+    "format": "\ue0bb {} ",
     "tooltip": false
   },
   "custom/slash1": {
