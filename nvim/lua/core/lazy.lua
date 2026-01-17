@@ -25,7 +25,13 @@ rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
-  spec = {
-    { import = 'plugins' }
-  },
+  require 'plugins.colortheme',
+  require 'plugins.neotree',
+  require 'plugins.treesitter',
+  require 'plugins.lsp',
+  require 'plugins.lazydev',
+  require 'plugins.telescope',
+  require 'plugins.guessindent',
+  require 'plugins.lualine',
+  require 'plugins.bufferline'
 })
