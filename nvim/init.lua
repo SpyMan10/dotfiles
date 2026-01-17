@@ -1,3 +1,5 @@
-require("vars")
-require("opts")
-require("config.lazy")
+require 'core.options'
+require 'core.keymaps'
+
+-- Lazy : Package Manager
+require 'core.lazy'
