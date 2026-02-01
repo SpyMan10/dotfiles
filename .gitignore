@@ -1,5 +1,2 @@
-# Ensure all files/directories ends with .git-skip will never be tracked.
-*.git-skip
-
-./fish/completions/
-./fish/fish_variables
+fish/completions/
+fish/fish_variables
