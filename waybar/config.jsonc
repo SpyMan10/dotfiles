@@ -6,10 +6,7 @@
     "custom/icon",
     "custom/arrow-icon",
     "hyprland/workspaces",
-    "custom/self",
-    "custom/slash0",
-    "tray",
-    "custom/slash1"
+    "tray"
     // "mpris"
   ],
   "modules-center": [
@@ -32,20 +29,6 @@
   },
   "custom/arrow-icon": {
     "format": "\ue0b0 ",
-    "tooltip": false
-  },
-  "custom/self": {
-    "exec": "echo \"$HOSTNAME \ue0bb $USER\"",
-    "interval": 0,
-    "format": "\ue0bb {} ",
-    "tooltip": false
-  },
-  "custom/slash1": {
-    "format": "\ue0b0 ",
-    "tooltip": false
-  },
-  "custom/slash0": {
-    "format": "\ue0bc ",
     "tooltip": false
   },
   "hyprland/workspaces": {

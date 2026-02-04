@@ -29,7 +29,7 @@ window#waybar {
   color: rgb(129, 241, 129);
 }
 
-.module:not(#clock):not(#tray):not(#workspaces):not(#custom-slash1):not(#custom-arrow-icon):not(#custom-slash0):not(#custom-slash1):not(#custom-self):hover {
+.module:not(#clock):not(#tray):not(#workspaces):not(#custom-slash1):not(#custom-arrow-icon):not(#custom-slash0):not(#custom-slash1):not(#custom-self):not(#custom-icon):hover {
   background: #eeeeee;
   color: #151515;
 }
@@ -42,13 +42,13 @@ tooltip box {
 }
 
 menu {
-  background: rgba(18, 18, 29, 0.9);
+  background: rgba(15, 15, 15, 0.90);
   border-radius: 6px;
   padding: 8px 0px;
 }
 
 menuitem label {
-  font-family: sans-serif;
+  font-family: "Inter";
 }
 
 menuitem {
@@ -58,8 +58,12 @@ menuitem {
 }
 
 menuitem:hover {
-  background: #343c64;
-  border-left: solid 2px rgb(68, 85, 179);
+  background: #b8b8b8;
+  border-left: solid 4px rgb(68, 85, 179);
+}
+
+menuitem:hover label {
+  color: black;
 }
 
 menuitem:disabled label,
@@ -68,44 +72,10 @@ menuitem:disabled image {
   color: #464b63;
 }
 
-#custom-slash0 {
-  padding: 0;
-  font-size: 22px;
-  margin-left: -2px;
-  margin-top: -2px;
-  color: rgb(41, 52, 110);
-}
-
-#custom-slash1 {
-  padding: 0;
-  font-size: 22px;
-  margin-top: -2px;
-  color: rgb(41, 52, 110);
-}
-
 #custom-arrow-icon {
   padding: 0;
   font-size: 22px;
-  margin-left: -2px;
-  margin-top: -2px;
   color: #eeeeee;
-}
-
-#custom-self,
-#custom-arrow-icon,
-#workspaces {
-  background: rgb(41, 52, 110);
-  border-bottom: 2px solid rgb(68, 85, 179);
-}
-
-#custom-slash0,
-#tray {
-  background: rgb(97, 60, 112);
-  border-bottom: 2px solid rgb(176,  79, 214);
-}
-
-#custom-slash1 {
-  color: rgb(97, 60, 112);
 }
 
 #workspaces button {
@@ -115,14 +85,16 @@ menuitem:disabled image {
 }
 
 #workspaces button.active {
-  color: #eeeeee;
-  background: rgb(68, 85, 179);
+  background: #eeeeee;
+}
+
+#workspaces button.active label {
+  color: black;
 }
 
 #custom-icon {
   color: rgb(68, 85, 179);
-  font-size: 18px;
-  border-bottom: 2px solid rgb(68, 85, 179);
+  font-size: 22px;
   background: #eeeeee;
 }
 
