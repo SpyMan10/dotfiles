@@ -1,0 +1,44 @@
+[env]
+# Issues with some programs: TERM must be either xterm or xterm-256color for compat.
+TERM = "xterm-256color"
+
+[window]
+padding = { x = 14, y = 10 }
+opacity = 0.9
+
+[font]
+normal = { family = "MartianMono Nerd Font", style = "Regular" }
+bold = { family = "MartianMono Nerd Font", style = "Bold" }
+italic = { family = "MartianMono Nerd Font", style = "Italic" }
+bold_italic = { family = "MartianMono Nerd Font", style = "Bold Italic" }
+size = 10
+offset = { y = 6 }
+glyph_offset = { y = 3 }
+
+[colors]
+cursor = { cursor = "#c9d1d9" }
+selection = { foreground = "#BFCCE0", background = "#566883" }
+
+[colors.primary]
+foreground = "#c9d1d9"
+background = "#151B25"
+
+[colors.normal]
+black = "#484f58"
+red = "#ff7b72"
+green = "#66C072"
+yellow = "#D4B267"
+blue = "#87BFFF"
+magenta = "#D2B2FF"
+cyan = "#4AC9E0"
+white = "#b1bac4"
+
+[colors.bright]
+black = "#6e7681"
+red = "#ffa198"
+green = "#84D38E"
+yellow = "#E9CF91"
+blue = "#9CD1FF"
+magenta = "#E0C2FF"
+cyan = "#7FECFF"
+white = "#ffffff"
