@@ -7,10 +7,10 @@ padding = { x = 14, y = 10 }
 opacity = 0.9
 
 [font]
-normal = { family = "MartianMono Nerd Font", style = "Regular" }
-bold = { family = "MartianMono Nerd Font", style = "Bold" }
-italic = { family = "MartianMono Nerd Font", style = "Italic" }
-bold_italic = { family = "MartianMono Nerd Font", style = "Bold Italic" }
+normal = { family = "Hack Nerd Font", style = "Regular" }
+bold = { family = "Hack Nerd Font", style = "Bold" }
+italic = { family = "Hack Nerd Font", style = "Italic" }
+bold_italic = { family = "Hack Nerd Font", style = "Bold Italic" }
 size = 10
 offset = { y = 6 }
 glyph_offset = { y = 3 }
