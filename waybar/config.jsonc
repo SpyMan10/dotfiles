@@ -219,7 +219,8 @@
     "menu-actions": {
       "shutdown": "poweroff",
       "reboot": "reboot",
-      "disconnect": "hyprctl dispatch exit"
+      "disconnect": "hyprctl dispatch exit",
+      "reboot-uefi": "systemctl reboot --firmware-setup"
     }
   },
   "custom/notification": {
