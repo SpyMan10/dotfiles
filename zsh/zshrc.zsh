@@ -73,6 +73,7 @@ ZSH_THEME="spyman"
 plugins=(
   git
   sudo
+  transient-prompt
 )
 
 source $ZSH/oh-my-zsh.sh
