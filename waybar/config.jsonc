@@ -37,31 +37,31 @@
       "default": "\uf4aa",
       "active": "\uf111"
     },
-    "persistent-workspaces": {
-      // Workstation
-      "HDMI-A-1": [
-        1
-      ],
-      "DP-1": [
-        2,
-        3,
-        4,
-        5
-      ],
-      "DP-2": [
-        6,
-        7,
-        8,
-        9
-      ],
-      // Laptop
-      "eDP-1": [
-        1,
-        2,
-        3,
-        4
-      ]
-    },
+    // "persistent-workspaces": {
+    //   // Workstation
+    //   "HDMI-A-1": [
+    //     1
+    //   ],
+    //   "DP-1": [
+    //     2,
+    //     3,
+    //     4,
+    //     5
+    //   ],
+    //   "DP-2": [
+    //     6,
+    //     7,
+    //     8,
+    //     9
+    //   ],
+    //   // Laptop
+    //   "eDP-1": [
+    //     1,
+    //     2,
+    //     3,
+    //     4
+    //   ]
+    // },
     "workspace-taskbar": {
       "enable": true,
       "format": "{title}"
@@ -221,7 +221,7 @@
     "menu-actions": {
       "shutdown": "poweroff",
       "reboot": "reboot",
-      "disconnect": "hyprctl dispatch exit",
+      "disconnect": "hyprctl dispatch \"hl.dsp.exit()\"",
       "reboot-uefi": "systemctl reboot --firmware-setup"
     }
   },

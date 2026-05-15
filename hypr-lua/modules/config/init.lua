@@ -1,0 +1,7 @@
+require("modules.config.layout")
+require("modules.config.general")
+require("modules.config.styles_and_animations")
+require("modules.config.misc")
+require("modules.config.startup")
+require("modules.config.rules")
+require("modules.config.gesture")
