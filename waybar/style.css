@@ -62,7 +62,7 @@ menuitem:hover {
   border-left: solid 4px rgb(68, 85, 179);
 }
 
-menuitem:hover label {
+menuitem:hover label, menuitem:hover image {
   color: black;
 }
 
@@ -73,7 +73,8 @@ menuitem:disabled image {
 }
 
 #custom-arrow-icon {
-  padding: 0;
+  margin: -1px 0px 0px 0px;
+  padding: 0px;
   font-size: 22px;
   color: #eeeeee;
 }
