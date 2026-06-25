@@ -82,40 +82,7 @@
     },
     "buttons-grid": {
       "buttons-per-row": 6,
-      "actions": [
-        {
-          "label": "",
-          "type": "button",
-          "command": "swaync-client --close-panel && sleep 0.7 && color=$(hyprpicker -a -f hex) && notify-send -a 'Hyprpicker' '🎨 Color copied!' $color"
-        },
-        {
-          "label": "",
-          "type": "button",
-          "command": "~/.config/hypr/scripts/screenshot"
-        },
-        {
-          "label": " ",
-          "type": "button",
-          "command": "swaync-client --close-panel && kitty --class wifibt -e env -u COLORTERM TERM=xterm-old nmtui"
-        },
-        {
-          "label": "",
-          "type": "button",
-          "command": "swaync-client --close-panel &&  blueberry"
-        },
-        {
-          "label": "",
-          "type": "toggle",
-          "command": "bash $HOME/.config/swaync/caffeine.sh",
-          "update-command": "bash $HOME/.config/swaync/caffeine.sh status"
-        },
-        {
-          "label": "",
-          "type": "toggle",
-          "command": "sh -c 'swaync-client --toggle-dnd'",
-          "update-command": "sh -c 'out=$(swaync-client -D 2>/dev/null); [[ $out == true || $(echo \"$out\" | jq -r .doNotDisturb 2>/dev/null) == true ]] && echo true || echo false'"
-        }
-      ]
+      "actions": []
     }
   }
 }

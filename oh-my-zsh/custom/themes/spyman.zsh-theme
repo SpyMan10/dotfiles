@@ -1,4 +1,4 @@
-PROMPT="┌ %F{087}  %~%{$reset_color%}%}"
+PROMPT="┌ %F{117}  %~%{$reset_color%}%}"
 PROMPT+='$(git_prompt_info)'
 PROMPT+="%{$reset_color%}"
 PROMPT+=$'\n'

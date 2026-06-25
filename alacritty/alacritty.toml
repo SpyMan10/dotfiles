@@ -7,11 +7,11 @@ padding = { x = 14, y = 10 }
 opacity = 0.9
 
 [font]
-normal = { family = "JetbrainsMono Nerd Font", style = "Regular" }
-bold = { family = "JetbrainsMono Nerd Font", style = "Bold" }
-italic = { family = "JetbrainsMono Nerd Font", style = "Italic" }
-bold_italic = { family = "JetbrainsMono Nerd Font", style = "Bold Italic" }
-size = 10
+normal = { family = "ZedMono NF Extd", style = "Regular" }
+bold = { family = "ZedMono NF Extd", style = "Bold" }
+italic = { family = "ZedMono NF Extd", style = "Italic" }
+bold_italic = { family = "ZedMono NF Extd", style = "Bold Italic" }
+size = 10.5
 offset = { y = 4 }
 glyph_offset = { y = 2 }
 
