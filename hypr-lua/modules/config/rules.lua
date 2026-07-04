@@ -61,3 +61,20 @@ hl.window_rule({
   },
   opacity = 0.9
 })
+
+hl.window_rule({
+  name = "force-center-floating",
+  match = {
+    float = true,
+  },
+  center = true
+})
+
+hl.window_rule({
+  name = "force-jb-toolbox-on-top-right",
+  match = {
+    class = "jetbrains-toolbox",
+    float = true,
+  },
+  move = { "cursor_x + 20", "cursor_y + 20" }
+})

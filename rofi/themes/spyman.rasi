@@ -1,5 +1,5 @@
 * {
-    bg-color: #151515E5;
+    bg-color: #21262Eff;
     bg-color-high: #353535E5;
     bg-color-light: #EEEEEEFF;
 
@@ -17,7 +17,7 @@
 }
 
 * {
-    font: "Noto Mono 11";
+    font: "Inter 10";
     background-color: transparent;
     text-color: @ft-color;
     margin: 0px;
@@ -46,7 +46,7 @@ inputbar {
     background-color: @bg-color-high;
     border: @br-sz;
     border-color: @br-color;
-    border-radius: @br-rad-full;
+    border-radius: @br-rad-inner;
     children: [entry];
 }
 
@@ -57,7 +57,7 @@ inputbar {
 // }
 
 entry {
-    font: "Noto Sans 12";
+    font: "Inter 12";
     placeholder: "...";
     placeholder-color: @ft-color-low;
     padding: 20px 40px;
