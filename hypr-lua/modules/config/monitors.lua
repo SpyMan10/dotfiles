@@ -46,9 +46,6 @@ end
 -- Default workspace decks per monitors --
 ------------------------------------------
 
-hl.bind('SUPER + F1', setup_180hz)
-hl.bind('SUPER + F2', setup_360hz)
-
 if util.is_laptop() then
   hl.monitor({
     output   = "eDP-1",
@@ -62,6 +59,9 @@ if util.is_laptop() then
   hl.workspace_rule({ workspace = "3", monitor = "eDP-1", persistent = true })
   hl.workspace_rule({ workspace = "4", monitor = "eDP-1", persistent = true })
 else
+  hl.bind('SUPER + F1', setup_180hz)
+  hl.bind('SUPER + F2', setup_360hz)
+
   -- Default mode.
   setup_180hz()
 

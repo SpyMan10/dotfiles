@@ -1,20 +1,24 @@
-hl.gesture({
-  fingers = 4,
-  direction = "horizontal",
-  action = "workspace"
-})
+local util = require("modules.util")
 
-local function toggle_special ()
+local function toggle_special()
   hl.dispatch(hl.dsp.workspace.toggle_special())
 end
 
-hl.gesture({
-  fingers = 4,
-  direction = "down",
-  action = toggle_special
-})
-hl.gesture({
-  fingers = 4,
-  direction = "up",
-  action = toggle_special
-})
+if util.is_laptop() then
+  hl.gesture({
+    fingers = 4,
+    direction = "horizontal",
+    action = "workspace"
+  })
+
+  hl.gesture({
+    fingers = 4,
+    direction = "down",
+    action = toggle_special
+  })
+  hl.gesture({
+    fingers = 4,
+    direction = "up",
+    action = toggle_special
+  })
+end
