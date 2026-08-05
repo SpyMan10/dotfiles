@@ -51,7 +51,7 @@ if util.is_laptop() then
     output   = "eDP-1",
     mode     = "2560x1600@60.001",
     position = "0x0",
-    scale    = 1.33,
+    scale    = 1.6,
   })
 
   hl.workspace_rule({ workspace = "1", monitor = "eDP-1", persistent = true })

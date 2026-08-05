@@ -8,5 +8,8 @@
     "globals": [
       "hl"
     ]
+  },
+  "format": {
+    "enable": true
   }
 }
