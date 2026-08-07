@@ -30,7 +30,7 @@ local function setup_180hz()
   })
   hl.monitor({
     output   = "DP-1",
-    mode     = "5120x2880@180",
+    mode     = "preferred",
     position = "1920x0",
     scale    = 2,
   })
