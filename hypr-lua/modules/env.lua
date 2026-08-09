@@ -1,3 +1,5 @@
 hl.env("EDITOR", "code")
 hl.env("TERMINAL", "alacritty")
 hl.env("BROWSER", "zen-browser")
+hl.env("QT_QPA_PLATFORMTHEME", "hyprqt6engine")
+hl.env("QT_QUICK_CONTROLS_STYLE", "Fusion")
