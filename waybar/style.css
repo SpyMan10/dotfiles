@@ -1,6 +1,6 @@
 * {
   /* You must use here a Propo font from NerdFonts. */
-  font-family: 'JetbrainsMono Nerd Font Propo';
+  font-family: 'IBM Plex Sans', 'Symbols Nerd Font';
   font-weight: 500;
   font-size: 14px;
   color: #eeeeee;
@@ -48,7 +48,7 @@ menu {
 }
 
 menuitem label {
-  font-family: "Inter";
+  font-family: 'IBM Plex Sans', 'Symbols Nerd Font';
 }
 
 menuitem {
@@ -73,6 +73,7 @@ menuitem:disabled image {
 }
 
 #custom-arrow-icon {
+  font-family: 'JetbrainsMono Nerd Font Propo';
   margin: -1px 0px 0px 0px;
   padding: 0px;
   font-size: 22px;
