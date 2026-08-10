@@ -21,6 +21,9 @@ hl.bind(mainMod .. " + PRINT", cmds.print_scr_window)
 hl.bind(mainMod .. " + SHIFT + C", cmds.pick_color)
 hl.bind(mainMod .. " + E", cmds.file_manager)
 
+-- Reload waybar
+hl.bind(mainMod .. " + SHIFT + R", cmds.reload_waybar)
+
 -- Multimedia / Audio / Display
 hl.bind("XF86AudioPlay", cmds.multimedia.toggle_play_pause)
 hl.bind("XF86AudioPause", cmds.multimedia.toggle_play_pause)

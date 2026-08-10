@@ -66,6 +66,10 @@ local function prev_track()
   _x("playerctl previous")
 end
 
+local function reload_waybar()
+  _x("killall waybar; waybar")
+end
+
 return {
   toggle_launcher = toggle_launcher,
   print_scr_window = print_scr_window,
@@ -86,5 +90,6 @@ return {
     toggle_play_pause = toggle_play,
     next = next_track,
     previous = prev_track
-  }
+  },
+  reload_waybar = reload_waybar
 }
