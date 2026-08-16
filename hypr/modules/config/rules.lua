@@ -67,14 +67,6 @@ hl.window_rule({
   match = {
     float = true,
   },
-  center = true
-})
-
-hl.window_rule({
-  name = "force-jb-toolbox-on-top-right",
-  match = {
-    class = "jetbrains-toolbox",
-    float = true,
-  },
-  move = { "cursor_x + 20", "cursor_y + 20" }
+  center = true,
+  workspace = 2
 })
